@@ -1,0 +1,77 @@
+5200 CAR Helper 1.0
+Copyright (c) 2026 Robert Dupuy. All rights reserved.
+RetroPowerhouse.com
+
+PURPOSE
+Convert a raw Atari 5200 .bin, .rom or .a52 file into a .car file
+with a standard 16-byte CART header. No Python, command line,
+internet connection or separate runtime installation is needed.
+
+USE
+1. Open 5200 CAR Helper.
+2. Choose a ROM file, or drop one file into the window.
+3. Choose the cartridge layout.
+4. Click Save .CAR file and choose a new filename.
+5. Copy the resulting .car file to your cartridge.
+
+The original ROM is unchanged. Existing output files are never
+overwritten, even if a system Save dialog offers to replace them.
+Choose a new name. The program reads back each output to verify it.
+
+CHOOSING A LAYOUT
+This helper does not contain the PicoCart ROM database. It is for
+raw files that need an explicit cartridge header. File size narrows
+the choices; it does not prove which hardware a ROM was designed for.
+
+4 KB:   Standard, type 20
+8 KB:   Standard, type 19
+16 KB:  Two-chip, type 6; or one-chip, type 16
+32 KB:  Standard, type 4
+40 KB:  Bounty Bob standard layout, type 7; alternate layout, type 159
+64 KB:  Super Cart, type 71
+128 KB: Super Cart, type 72
+256 KB: Super Cart, type 73
+512 KB: Super Cart, type 74
+
+For 16 KB, consult the ROM's documentation. If unknown, you can create
+two separately named files and test both mappings. The helper names
+these outputs with -type6 or -type16 by default. There is no reliable
+universal size-only test for which of these mappings is correct.
+
+40 KB Bounty Bob dumps likewise require the correct layout selection.
+The helper does not rearrange their bytes. Type 159 requires firmware
+that supports that alternate layout.
+
+The list describes CAR formats the helper can write, not a promise
+that your PicoCart firmware supports every listed format. A header
+cannot add missing mapper support, repair a damaged dump, change
+custom banking hardware, or convert a game for another Atari system.
+HYB and arbitrary custom mappers are not supported by this helper.
+
+Other file sizes (for example 10 KB) are rejected. No padding,
+trimming, deinterleaving, or guessed type numbers are applied.
+A file already beginning with CART is refused to avoid double headers.
+Extract ZIP archives before selecting a ROM.
+
+FORMAT
+Bytes 0-3: CART
+Bytes 4-7: selected cartridge type, unsigned 32-bit big endian
+Bytes 8-11: sum of all ROM bytes, unsigned 32-bit big endian
+Bytes 12-15: zero
+Bytes 16 onward: original ROM bytes, unchanged
+Reference: https://github.com/atari800/atari800/blob/master/DOC/cart.txt
+
+VALIDATION
+84 conversion checks cover all 11 formats, header fields, checksums,
+byte preservation, invalid sizes, type mismatches and double headers.
+10 headless UI/file checks cover selection, saving, source preservation,
+overwrite refusal, invalid input and default layout sizing.
+Tests ran on Linux using the shared application code. The exported
+Windows and macOS applications have not been run on those operating
+systems or tested with physical Atari hardware in this build session.
+
+NOTICES
+The helper's original code is copyright Robert Dupuy, all rights reserved.
+The bundled Godot engine and third-party components retain their own
+licenses. See Godot-LICENSE.txt and Godot-COPYRIGHT.txt in this package.
+No ROMs or cartridge firmware are included.

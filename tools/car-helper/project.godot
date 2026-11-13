@@ -1,0 +1,16 @@
+config_version=5
+[application]
+config/name="5200 CAR Helper"
+config/version="1.0.0"
+run/main_scene="res://main.tscn"
+[display]
+window/size/viewport_width=760
+window/size/viewport_height=660
+window/size/window_width_override=760
+window/size/window_height_override=660
+window/stretch/mode="canvas_items"
+[rendering]
+renderer/rendering_method="gl_compatibility"
+renderer/rendering_method.mobile="gl_compatibility"
+environment/defaults/default_clear_color=Color(0.055,0.075,0.11,1)
+textures/vram_compression/import_etc2_astc=true
