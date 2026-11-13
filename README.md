@@ -20,9 +20,24 @@ Choose the ROM, select its cartridge layout, and save a new CAR file. The origin
 
 The **UF2 firmware remains the main/latest release**. The helper is a separate optional download.
 
-## R5.2 — initial installation
+## Optional factory reinstall
 
-This installer is for a **blank RP2040 module with 16 MB flash**. It programs only the sectors needed for firmware and the included files. It is not an in-place firmware updater for a cartridge that already contains files.
+**Firmware updates are not required for normal use. All firmware versions support CAR files.** Customers who wish to reinstall can erase the cartridge and then install the factory firmware.
+
+**Erasing removes all games, folders, and other files. Back up everything on A5200CART to your computer first.**
+
+1. Back up the cartridge, safely eject it, and disconnect USB. Keep it removed from the Atari throughout this process.
+2. Open the cartridge case to reach **BOOTSEL on the internal RP2040 board**. This is not the cartridge reset button.
+3. Hold BOOTSEL while connecting USB to the computer, then release it when **RPI-RP2** appears.
+4. Copy [**01-ERASE-ALL-16MiB-Verified.uf2**](https://github.com/RobertDupuy/Atari5200PicoCart/releases/download/v5.2/01-ERASE-ALL-16MiB-Verified.uf2) onto RPI-RP2. Allow erasing to finish before proceeding.
+5. With the cartridge back in BOOTSEL mode and RPI-RP2 available, copy the [**R5.2 factory firmware UF2**](https://github.com/RobertDupuy/Atari5200PicoCart/releases/download/v5.2/RetroPowerhouse-A5200-R5.2-3-Games-and-PDF-Blank-RP2040.uf2) onto it. **Use the two UF2 files separately, in this order—not together.**
+6. After installation finishes and A5200CART returns, copy your backed-up games and folders onto it. Safely eject, disconnect USB, and reassemble the case.
+
+The erase file is for the PicoCart's **16 MB flash module**. The factory installer restores the firmware and supplied files after the erase; it is not an in-place update that preserves files.
+
+Erase UF2 SHA-256: `596fbbd2cb17fa2eacd91810a983d67745cb5ecf3224d4c9482ec82d3de935d2`
+
+## R5.2 factory contents
 
 The UF2 installs:
 
