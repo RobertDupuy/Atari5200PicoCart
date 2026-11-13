@@ -18,7 +18,16 @@ func label(text: String, size: int = 17) -> Label:
  return node
 
 func _ready():
- get_window().min_size = Vector2i(760,660)
+ var window = get_window()
+ var desired = Vector2i(1064,924)
+ var usable = DisplayServer.screen_get_usable_rect(window.current_screen)
+ if usable.size.x > 0 and usable.size.y > 0:
+  var fit = minf(1.0,minf(usable.size.x * 0.9 / desired.x,usable.size.y * 0.9 / desired.y))
+  window.size = Vector2i(Vector2(desired) * fit)
+  window.position = usable.position + (usable.size - window.size) / 2
+ else:
+  window.size = desired
+ window.min_size = Vector2i(608,528)
  var margin = MarginContainer.new()
  margin.set_anchors_and_offsets_preset(Control.PRESET_FULL_RECT)
  for side in ["left","top","right","bottom"]: margin.add_theme_constant_override("margin_"+side,28)
@@ -57,7 +66,7 @@ func _ready():
  status = label("Ready. All conversion happens on your computer.",16)
  status.custom_minimum_size.y = 54
  column.add_child(status)
- var footer = label("A header describes the cartridge; your firmware must support that type.\n© 2026 Robert Dupuy  •  Version 1.0",14)
+ var footer = label("A header describes the cartridge; your firmware must support that type.\n© 2026 Robert Dupuy  •  Version 1.0.1",14)
  footer.modulate = Color("b3bfce")
  column.add_child(footer)
  open_dialog = FileDialog.new()

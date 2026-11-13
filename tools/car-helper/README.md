@@ -1,14 +1,16 @@
-# 5200 CAR Helper 1.0
+# 5200 CAR Helper 1.0.1
 
 Copyright © 2026 Robert Dupuy. All rights reserved.
 
 An offline desktop utility for converting raw Atari 5200 `.bin`, `.rom` and `.a52` files to `.car`. This folder contains **helper application source only**.
 
+Opens at 1064 × 924 with scaled text and controls, centered on the screen. On smaller screens, the starting size fits within 90% of the available work area.
+
 ## Downloads
 
-- [Windows (64-bit)](https://github.com/RobertDupuy/Atari5200PicoCart/releases/download/car-helper-v1.0/5200-CAR-Helper-Windows.zip)
-- [Mac (Intel and Apple silicon)](https://github.com/RobertDupuy/Atari5200PicoCart/releases/download/car-helper-v1.0/5200-CAR-Helper-Mac.zip)
-- [Helper release and source ZIP](https://github.com/RobertDupuy/Atari5200PicoCart/releases/tag/car-helper-v1.0)
+- [Windows (64-bit)](https://github.com/RobertDupuy/Atari5200PicoCart/releases/download/car-helper-v1.0.1/5200-CAR-Helper-Windows.zip)
+- [Mac (Intel and Apple silicon)](https://github.com/RobertDupuy/Atari5200PicoCart/releases/download/car-helper-v1.0.1/5200-CAR-Helper-Mac.zip)
+- [Helper release and source ZIP](https://github.com/RobertDupuy/Atari5200PicoCart/releases/tag/car-helper-v1.0.1)
 
 Choose a ROM, select its cartridge layout, and save a new CAR file. The original bytes are preserved. Existing output files are never overwritten. The helper does not include the PicoCart fingerprint database. Size narrows the choices but cannot determine every mapping: 16 KB and 40 KB require an explicit layout choice. A header cannot add firmware support for a mapper.
 

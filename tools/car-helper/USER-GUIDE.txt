@@ -1,6 +1,10 @@
-5200 CAR Helper 1.0
+5200 CAR Helper 1.0.1
 Copyright (c) 2026 Robert Dupuy. All rights reserved.
 RetroPowerhouse.com
+
+UPDATE 1.0.1
+Opens at 1064 x 924, centered and scaled to fit 90% of the available
+screen when necessary. Text and controls scale with the window.
 
 PURPOSE
 Convert a raw Atari 5200 .bin, .rom or .a52 file into a .car file

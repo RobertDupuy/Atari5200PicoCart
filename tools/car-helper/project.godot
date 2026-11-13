@@ -1,13 +1,13 @@
 config_version=5
 [application]
 config/name="5200 CAR Helper"
-config/version="1.0.0"
+config/version="1.0.1"
 run/main_scene="res://main.tscn"
 [display]
 window/size/viewport_width=760
 window/size/viewport_height=660
-window/size/window_width_override=760
-window/size/window_height_override=660
+window/size/window_width_override=1064
+window/size/window_height_override=924
 window/stretch/mode="canvas_items"
 [rendering]
 renderer/rendering_method="gl_compatibility"

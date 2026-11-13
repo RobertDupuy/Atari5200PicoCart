@@ -12,9 +12,9 @@ UF2 firmware downloads for the Retro Powerhouse Atari 5200 PicoCart.
 
 Convert raw `.bin`, `.rom` or `.a52` files into `.CAR` files on your computer:
 
-- [**Download for Windows (64-bit)**](https://github.com/RobertDupuy/Atari5200PicoCart/releases/download/car-helper-v1.0/5200-CAR-Helper-Windows.zip)
-- [**Download for Mac (Intel and Apple silicon)**](https://github.com/RobertDupuy/Atari5200PicoCart/releases/download/car-helper-v1.0/5200-CAR-Helper-Mac.zip)
-- [Instructions and helper source](tools/car-helper) · [Helper release](https://github.com/RobertDupuy/Atari5200PicoCart/releases/tag/car-helper-v1.0)
+- [**Download for Windows (64-bit)**](https://github.com/RobertDupuy/Atari5200PicoCart/releases/download/car-helper-v1.0.1/5200-CAR-Helper-Windows.zip)
+- [**Download for Mac (Intel and Apple silicon)**](https://github.com/RobertDupuy/Atari5200PicoCart/releases/download/car-helper-v1.0.1/5200-CAR-Helper-Mac.zip)
+- [Instructions and helper source](tools/car-helper) · [Helper release](https://github.com/RobertDupuy/Atari5200PicoCart/releases/tag/car-helper-v1.0.1)
 
 Choose the ROM, select its cartridge layout, and save a new CAR file. The original is unchanged. Some sizes have more than one layout; adding a header does not add unsupported mapper functionality to the cartridge firmware. First-launch security instructions are included in the downloads.
 
