@@ -4,7 +4,7 @@ Copyright © 2026 Robert Dupuy. All rights reserved.
 
 An offline desktop utility for converting raw Atari 5200 `.bin`, `.rom` and `.a52` files to `.car`. This folder contains **helper application source only**.
 
-Opens at 1064 × 924 with scaled text and controls, centered on the screen. On smaller screens, the starting size fits within 90% of the available work area.
+Opens at a 1064 × 924 base size adjusted for Retina/high-DPI displays, with scaled text and controls, centered on the screen. On smaller screens, the starting size fits within 90% of the available work area.
 
 ## Downloads
 

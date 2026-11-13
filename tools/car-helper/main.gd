@@ -19,7 +19,10 @@ func label(text: String, size: int = 17) -> Label:
 
 func _ready():
  var window = get_window()
- var desired = Vector2i(1064,924)
+ var display_scale = maxf(1.0,DisplayServer.screen_get_scale(window.current_screen))
+ if OS.get_name() == "Windows":
+  display_scale = maxf(1.0,DisplayServer.screen_get_dpi(window.current_screen) / 96.0)
+ var desired = Vector2i(Vector2(1064,924) * display_scale)
  var usable = DisplayServer.screen_get_usable_rect(window.current_screen)
  if usable.size.x > 0 and usable.size.y > 0:
   var fit = minf(1.0,minf(usable.size.x * 0.9 / desired.x,usable.size.y * 0.9 / desired.y))
