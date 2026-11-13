@@ -1,0 +1,7 @@
+Atari5200PicoCart
+Copyright © 2026 Robert Dupuy.
+
+All rights reserved for the original firmware and documentation.
+Third-party components and bundled games retain their respective owners' rights.
+See THIRD-PARTY-NOTICES.txt for third-party software notices and license terms.
+
